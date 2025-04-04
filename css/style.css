@@ -93,46 +93,33 @@ ul li:hover ul.dropdown{
 }
 
 .stat-container{
-    display: grid;
-    gap: 24px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    margin:30px auto;
     max-width: 1000px;
     padding-inline: 16px;
 }
-.stat-container{
-    padding: 20px 50px;
-    text-align: center;
-    gap: 24px;
-    margin: 30px auto;
-    max-width: 1000px;
-}
 
 .stat-container .stat{
-    padding: 24px;
+    padding: 30px 40px;
     text-align: center;
-    background: #c40606;
+    background: #000;
+    border: 10px solid #c40606;
+    width: 200px;
 }
 
 .stat-container .stat .contador{
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
-    display: inline-block;
+    display: block;
+    margin-bottom:5px;
+    background: transparent;
 }
 
 .stat-container .stat .type{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
+    background: transparent;
+    display:block;
 }
 
-/*.contador.plus{
-    position:relative;
-}
-
-.contador.plus:after{
-    position:absolute;
-    top:0;
-    right: -16px;
-    font-size:20px;
-
-}*/ 
