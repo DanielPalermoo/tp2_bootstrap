@@ -91,3 +91,48 @@ ul li:hover ul.dropdown{
     font-size: 16px;
     line-height: 1.3;
 }
+
+.stat-container{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px auto;
+    max-width: 1000px;
+    padding-inline: 16px;
+}
+.stat-container{
+    padding: 20px 50px;
+    text-align: center;
+    gap: 24px;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.stat-container .stat{
+    padding: 24px;
+    text-align: center;
+    background: #c40606;
+}
+
+.stat-container .stat .contador{
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.stat-container .stat .type{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*.contador.plus{
+    position:relative;
+}
+
+.contador.plus:after{
+    position:absolute;
+    top:0;
+    right: -16px;
+    font-size:20px;
+
+}*/ 
