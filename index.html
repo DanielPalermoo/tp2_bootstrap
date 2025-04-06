@@ -6,8 +6,11 @@
     <title>TP1 PySW</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Menu desplegable para ir a otras paginas y encabezado-->
     <section class="section_header">
         <header class="header">
             <nav>
@@ -26,10 +29,12 @@
         </header>
     </section>
     
+    <!--Video motivacional incrustado-->
     <section class="hero">
         <iframe class="hero_iframe" width="1342" height="755" src="https://www.youtube.com/embed/I_RYujJvZ7s" title="Gym Promotional Video | Cinematic Workout Advertisment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
+    <!--Seccion de clases destacadas-->
     <section class="card-conteiner">
         <div class="card">
             <img src="img/pesas.jpg" alt="">
@@ -60,6 +65,7 @@
         </div>
     </section>
 
+    <!--Seccion de usuarios satisfechos-->
     <section class="stat-container">
         <div class="stat">
             <div class="contador" data-target="500">0</div>
@@ -84,10 +90,41 @@
         </div>
     </section>
 
-    <footer>
 
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ingresa tu correo" required>
+                </form>
+                <button type="submit" class="btn-submit">Suscribirse</button>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Siguenos</h3>
+            <div class="social-link">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ubicacion</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
     </footer>
     
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 RolaGym. Todos los derechos reservados</p>
+    </div>
     
     <script src="js/main.js"></script>
 
