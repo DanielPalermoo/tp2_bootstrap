@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases - RolaGym Fitness</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/clases.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menu desplegable para ir a otras paginas y encabezado-->
+    <section class="section_header">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="entrenadores.html">Profesores</a></li>
+                            <li><a href="#">Precios</a></li>
+                            <li><a href="../index.thml">Inicio</a></li>
+                            <li><a href="#">Inscripcion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!-- Título de la página -->
+    <div class="page-title">
+        <h1>Nuestras Clases</h1>
+        <p>Descubre todas las actividades que tenemos para ofrecerte</p>
+    </div>
+
+    <!-- Sistema de filtrado por categoría -->
+    <div class="filter-container">
+        <h2>Filtrar por categoría:</h2>
+        <div class="filter-options">
+            <input type="radio" id="all" name="category" value="all" checked>
+            <label for="all">Todas</label>
+
+            <input type="radio" id="musculacion" name="category" value="musculacion">
+            <label for="musculacion">Musculación</label>
+
+            <input type="radio" id="crossfit" name="category" value="crossfit">
+            <label for="crossfit">CrossFit</label>
+
+            <input type="radio" id="yoga" name="category" value="yoga">
+            <label for="yoga">Yoga</label>
+
+            <input type="radio" id="spinning" name="category" value="spinning">
+            <label for="spinning">Spinning</label>
+        </div>
+    </div>
+
+    <!-- Galería tipo masonry con CSS Grid -->
+    <div class="masonry-gallery">
+        <!-- Musculación -->
+        <div class="gallery-item musculacion">
+            <div class="card-class">
+                <img src="../img/musculacion1.jpg" alt="Clase de Musculación">
+                <div class="card-overlay">
+                    <h3>Entrenamiento de Fuerza</h3>
+                    <p>Desarrolla tu fuerza y resistencia muscular con nuestro programa especializado.</p>
+                    <span class="category-tag">Musculación</span>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item musculacion">
+            <div class="card-class">
+                <img src="../img/musculacion2.jpg" alt="Clase de Musculación">
+                <div class="card-overlay">
+                    <h3>Hipertrofia</h3>
+                    <p>Aumenta tu masa muscular con técnicas avanzadas y entrenamiento progresivo.</p>
+                    <span class="category-tag">Musculación</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CrossFit -->
+        <div class="gallery-item crossfit">
+            <div class="card-class">
+                <img src="../img/crossfit1.jpg" alt="Clase de CrossFit">
+                <div class="card-overlay">
+                    <h3>WOD Diario</h3>
+                    <p>Workout of the Day con ejercicios variados y de alta intensidad.</p>
+                    <span class="category-tag">CrossFit</span>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item crossfit">
+            <div class="card-class">
+                <img src="../img/crossfit2.jpg" alt="Clase de CrossFit">
+                <div class="card-overlay">
+                    <h3>CrossFit Avanzado</h3>
+                    <p>Para atletas experimentados que buscan llevar su entrenamiento al siguiente nivel.</p>
+                    <span class="category-tag">CrossFit</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yoga -->
+        <div class="gallery-item yoga">
+            <div class="card-class">
+                <img src="../img/yoga1.jpg" alt="Clase de Yoga">
+                <div class="card-overlay">
+                    <h3>Hatha Yoga</h3>
+                    <p>Práctica tradicional enfocada en posturas y respiración para principiantes y nivel intermedio.</p>
+                    <span class="category-tag">Yoga</span>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item yoga">
+            <div class="card-class">
+                <img src="../img/yoga2.jpg" alt="Clase de Yoga">
+                <div class="card-overlay">
+                    <h3>Vinyasa Flow</h3>
+                    <p>Secuencias dinámicas que conectan movimiento y respiración.</p>
+                    <span class="category-tag">Yoga</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spinning -->
+        <div class="gallery-item spinning">
+            <div class="card-class">
+                <img src="../img/spinning1.jpg" alt="Clase de Spinning">
+                <div class="card-overlay">
+                    <h3>Spinning Intensivo</h3>
+                    <p>45 minutos de cardio de alta intensidad para quemar calorías rápidamente.</p>
+                    <span class="category-tag">Spinning</span>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item spinning">
+            <div class="card-class">
+                <img src="../img/spinning2.jpg" alt="Clase de Spinning">
+                <div class="card-overlay">
+                    <h3>Cycling Endurance</h3>
+                    <p>Entrenamiento de resistencia con intervalos para mejorar tu capacidad cardiovascular.</p>
+                    <span class="category-tag">Spinning</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabla de horarios -->
+    <div class="schedule-section">
+        <h2>Horarios Semanales</h2>
+        <div class="table-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="yoga-class">Yoga</td>
+                    </tr>
+                    <tr>
+                        <td>9:30</td>
+                        <td class="yoga-class">Yoga</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="yoga-class">Yoga</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="yoga-class">Yoga</td>
+                        <td class="crossfit-class">CrossFit</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="spinning-class">Spinning</td>
+                    </tr>
+                    <tr>
+                        <td>17:00</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="yoga-class">Yoga</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="yoga-class">Yoga</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>18:30</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="musculacion-class">Musculación</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>20:00</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td class="spinning-class">Spinning</td>
+                        <td class="crossfit-class">CrossFit</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Suscribirse</button>
+                </form>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 RolaGym. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

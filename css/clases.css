@@ -1,0 +1,306 @@
+/* Estilos para la página de clases */
+
+/* Título de la página */
+.page-title {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000;
+    border-bottom: 3px solid #c40606;
+}
+
+.page-title h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.page-title p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Sistema de filtrado */
+.filter-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.filter-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-options input[type="radio"] {
+    display: none;
+}
+
+.filter-options label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-options label:hover {
+    background-color: #222;
+}
+
+.filter-options input[type="radio"]:checked + label {
+    background-color: #c40606;
+    border-color: #c40606;
+}
+
+/* Filtrado de categorías con CSS */
+body:has(#all:checked) .masonry-gallery .gallery-item {
+    display: flex;
+}
+
+body:has(#musculacion:checked) .masonry-gallery .gallery-item:not(.musculacion) {
+    display: none;
+}
+
+body:has(#crossfit:checked) .masonry-gallery .gallery-item:not(.crossfit) {
+    display: none;
+}
+
+body:has(#yoga:checked) .masonry-gallery .gallery-item:not(.yoga) {
+    display: none;
+}
+
+body:has(#spinning:checked) .masonry-gallery .gallery-item:not(.spinning) {
+    display: none;
+}
+
+/* Galería tipo masonry con CSS Grid */
+.masonry-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 10px;
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    grid-row-end: span 30; /* Altura base */
+}
+
+/* Diferentes alturas para las imágenes */
+.gallery-item:nth-child(1) { grid-row-end: span 37; }
+.gallery-item:nth-child(2) { grid-row-end: span 30; }
+.gallery-item:nth-child(3) { grid-row-end: span 35; }
+.gallery-item:nth-child(4) { grid-row-end: span 28; }
+.gallery-item:nth-child(5) { grid-row-end: span 32; }
+.gallery-item:nth-child(6) { grid-row-end: span 38; }
+.gallery-item:nth-child(7) { grid-row-end: span 33; }
+.gallery-item:nth-child(8) { grid-row-end: span 29; }
+
+/* Tarjetas con información de las clases */
+.card-class {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card-class:hover {
+    transform: scale(1.03);
+}
+
+.card-class img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-class:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px;
+    transform: translateY(70%);
+    transition: transform 0.4s ease;
+}
+
+.card-class:hover .card-overlay {
+    transform: translateY(0);
+}
+
+.card-overlay h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background: transparent;
+}
+
+.card-overlay p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #c40606;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 12px;
+    background: #c40606;
+}
+
+/* Tabla de horarios */
+.schedule-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.schedule-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.schedule-table th {
+    background-color: #111;
+    font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #0a0a0a;
+}
+
+.schedule-table tr:hover {
+    background-color: #1a1a1a;
+}
+
+/* Colores para las diferentes clases */
+.musculacion-class {
+    background-color: rgba(196, 6, 6, 0.8);
+}
+
+.crossfit-class {
+    background-color: rgba(41, 128, 185, 0.8);
+}
+
+.yoga-class {
+    background-color: rgba(46, 204, 113, 0.8);
+}
+
+.spinning-class {
+    background-color: rgba(155, 89, 182, 0.8);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .masonry-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title h1 {
+        font-size: 32px;
+    }
+    
+    /* Modificar la tabla para dispositivos móviles */
+    .schedule-table thead {
+        display: none;
+    }
+    
+    .schedule-table, 
+    .schedule-table tbody, 
+    .schedule-table tr, 
+    .schedule-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .schedule-table tr {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #c40606;
+    }
+    
+    .schedule-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #333;
+    }
+    
+    .schedule-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    /* Reposicionar los elementos para mobile */
+    .filter-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-options label {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        grid-row-end: span 25 !important;
+    }
+}
