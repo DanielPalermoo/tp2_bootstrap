@@ -1,0 +1,294 @@
+/* Estilos para la página de entrenadores */
+
+/* Título de la página */
+.page-title {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-title h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #c40606;
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* Contenedor de las tarjetas de entrenadores */
+.trainers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Tarjetas de entrenadores con efecto flip */
+.trainer-card {
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+.trainer-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #111;
+}
+
+.card-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.trainer-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.trainer-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.trainer-info p {
+    margin: 8px 0 12px;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.card-back {
+    background-color: #111;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-back h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.card-back h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #c40606;
+}
+
+.card-back p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Estilos para las habilidades con barra animada */
+.skills {
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #c40606;
+    border-radius: 5px;
+    position: relative;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-size: 0.8rem;
+    line-height: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fillBar 1s forwards;
+}
+
+/* Animación para llenar la barra de habilidades cuando la tarjeta está volteada */
+@keyframes fillBar {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.trainer-card:hover .skill-level {
+    animation: fillBar 1s forwards;
+}
+
+/* Estilos para los iconos sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #c40606;
+    transform: translateY(-3px);
+}
+
+/* Sistema de rating con estrellas animadas (CSS-only) */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+    position: relative;
+    display: block;
+}
+
+.rating label:before {
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    position: absolute;
+    display: block;
+    color: #ccc;
+    font-size: 20px;
+}
+
+.rating input:checked ~ label:before,
+.rating label:hover ~ label:before,
+.rating label:hover:before {
+    content: '\f005';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #ffc107;
+    transition: 0.3s;
+}
+
+/* Animación de las estrellas */
+.rating label {
+    animation: starPulse 2s infinite alternate;
+}
+
+@keyframes starPulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Ajustes para responsive */
+@media (max-width: 768px) {
+    .trainers-container {
+        padding: 10px;
+    }
+    
+    .trainer-card {
+        width: 280px;
+        height: 420px;
+    }
+    
+    .card-back h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card-back p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h1 {
+        font-size: 2.2rem;
+    }
+    
+    .trainer-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}	
