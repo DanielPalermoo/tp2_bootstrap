@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/revista.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menu desplegable para ir a otras paginas y encabezado-->
+    <section class="section_header">
+        <header class="header">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul class="dropdown">
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="clases.html">Clases</a></li>
+                            <li><a href="contacto.html">Inscripcion</a></li>
+                            <li><a href="entrenadores.html">Profesores</a></li>
+                            <li><a href="precios.html">Precios</a></li>
+                            <li><a href="revista.html">Revista</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+
+
+    <div class="blog-title">
+        <h1>Blog de Fitness</h1>
+        <p>Artículos y consejos para mejorar tu entrenamiento y estilo de vida</p>
+    </div>
+
+    <!-- Sistema de filtrado por categorías -->
+    <div class="filter-container">
+        <h2>Filtrar por categoría:</h2>
+        <div class="filter-options">
+            <input type="radio" id="all" name="category" value="all" checked>
+            <label for="all">Todos</label>
+
+            <input type="radio" id="nutrition" name="category" value="nutrition">
+            <label for="nutrition">Nutrición</label>
+
+            <input type="radio" id="training" name="category" value="training">
+            <label for="training">Entrenamiento</label>
+
+            <input type="radio" id="mindfulness" name="category" value="mindfulness">
+            <label for="mindfulness">Mindfulness</label>
+
+            <input type="radio" id="lifestyle" name="category" value="lifestyle">
+            <label for="lifestyle">Estilo de Vida</label>
+        </div>
+    </div>
+
+    <!-- Contenedor principal del blog (newspaper style usando grid) -->
+    <main class="blog-container">
+        <!-- Artículo destacado (grande) -->
+        <article class="blog-item featured nutrition" data-category="nutrition">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/nutricion1.jpg" alt="Nutrición para deportistas">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag nutrition-tag">Nutrición</span>
+                        <span class="tag">Destacado</span>
+                    </div>
+                    <h2>Nutrición óptima para maximizar el rendimiento deportivo</h2>
+                    <p class="article-date">10 de Abril, 2025</p>
+                    <p class="article-excerpt">Descubre cómo los macronutrientes y micronutrientes afectan tu rendimiento y cómo crear un plan nutricional personalizado que se adapte a tus objetivos de entrenamiento.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo regular -->
+        <article class="blog-item training" data-category="training">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/entreno1.jpg" alt="Entrenamiento HIIT">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag training-tag">Entrenamiento</span>
+                    </div>
+                    <h2>HIIT: Maximiza tu entrenamiento en menos tiempo</h2>
+                    <p class="article-date">8 de Abril, 2025</p>
+                    <p class="article-excerpt">El entrenamiento de intervalos de alta intensidad puede mejorar tu capacidad cardiovascular y quemar grasa en sesiones de solo 20 minutos.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo regular -->
+        <article class="blog-item mindfulness" data-category="mindfulness">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/salud1.jpg" alt="Meditación para deportistas">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag mindfulness-tag">Mindfulness</span>
+                    </div>
+                    <h2>Meditación para deportistas: mejora tu concentración</h2>
+                    <p class="article-date">5 de Abril, 2025</p>
+                    <p class="article-excerpt">Aprende técnicas de respiración y meditación para mejorar tu rendimiento deportivo y reducir la ansiedad antes de competiciones.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo regular -->
+        <article class="blog-item lifestyle" data-category="lifestyle">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/descanso2.jpg" alt="Recuperación y descanso">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag lifestyle-tag">Estilo de Vida</span>
+                    </div>
+                    <h2>La importancia del descanso y recuperación en el entrenamiento</h2>
+                    <p class="article-date">3 de Abril, 2025</p>
+                    <p class="article-excerpt">El sueño y la recuperación son tan importantes como el entrenamiento mismo. Descubre cómo optimizar ambos aspectos para mejorar tus resultados.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo regular -->
+        <article class="blog-item nutrition" data-category="nutrition">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/entreno2.jpg" alt="Proteínas vegetales">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag nutrition-tag">Nutrición</span>
+                    </div>
+                    <h2>Fuentes de proteína para deportistas vegetarianos</h2>
+                    <p class="article-date">1 de Abril, 2025</p>
+                    <p class="article-excerpt">Guía completa de fuentes vegetales de proteína para mantener y desarrollar masa muscular sin consumir productos animales.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Artículo regular -->
+        <article class="blog-item training" data-category="training">
+            <div class="reveal-item">
+                <div class="article-image">
+                    <img src="../img/blog/motivacion1.jpg" alt="CrossFit para principiantes">
+                </div>
+                <div class="article-content">
+                    <div class="article-tags">
+                        <span class="tag training-tag">Entrenamiento</span>
+                    </div>
+                    <h2>Guía de CrossFit para principiantes</h2>
+                    <p class="article-date">28 de Marzo, 2025</p>
+                    <p class="article-excerpt">Todo lo que necesitas saber antes de empezar con CrossFit: técnicas básicas, terminología y progresiones para evitar lesiones.</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Sección de comentarios con avatares -->
+    <section class="comments-section">
+        <h2 class="section-title">Comentarios recientes</h2>
+        
+        <div class="comment">
+            <div class="comment-avatar" data-initial="M"></div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h3 class="comment-author">Martín Rodríguez</h3>
+                    <span class="comment-date">Hace 2 días</span>
+                </div>
+                <p class="comment-text">El artículo sobre nutrición me ha ayudado mucho a mejorar mi alimentación después de entrenar. ¡Excelentes consejos!</p>
+                <div class="comment-actions">
+                    <button class="comment-like"><i class="fas fa-thumbs-up"></i> 12</button>
+                    <button class="comment-reply">Responder</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <div class="comment-avatar" data-initial="L"></div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h3 class="comment-author">Laura Torres</h3>
+                    <span class="comment-date">Hace 5 días</span>
+                </div>
+                <p class="comment-text">Estoy probando la rutina HIIT de 20 minutos que mencionan y realmente se nota la diferencia. Me gustaría ver más artículos con rutinas cortas pero intensas.</p>
+                <div class="comment-actions">
+                    <button class="comment-like"><i class="fas fa-thumbs-up"></i> 8</button>
+                    <button class="comment-reply">Responder</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comment">
+            <div class="comment-avatar" data-initial="J"></div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h3 class="comment-author">Javier Méndez</h3>
+                    <span class="comment-date">Hace 1 semana</span>
+                </div>
+                <p class="comment-text">Las técnicas de mindfulness realmente han mejorado mi concentración durante las competencias. Lo recomiendo totalmente a cualquier deportista que tenga problemas de ansiedad.</p>
+                <div class="comment-actions">
+                    <button class="comment-like"><i class="fas fa-thumbs-up"></i> 15</button>
+                    <button class="comment-reply">Responder</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="add-comment">
+            <h3>Dejar un comentario</h3>
+            <form class="comment-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Tu comentario..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Publicar Comentario</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ingresa tu correo" required>
+                </form>
+                <button type="submit" class="btn-submit">Suscribirse</button>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Siguenos</h3>
+            <div class="social-link">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ubicacion</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 RolaGym. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!--<script src="../js/revista.js"></script>-->
+</body>
+</html>
