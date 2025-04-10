@@ -1,0 +1,489 @@
+/* Variables CSS para mantener consistencia */
+:root {
+    --color-primario: #c40606;
+    --color-primario-hover: #e50808;
+    --color-secundario: #333;
+    --color-texto: #fff;
+    --color-fondo: #000;
+    --color-destacado: #c40606;
+    --sombra-card: 0 5px 15px rgba(255, 255, 255, 0.1);
+    --transicion: all 0.3s ease;
+}
+
+/* Estilos generales de la página de precios */
+.precios-hero {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 20px;
+}
+
+.precios-hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.precios-hero h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: var(--color-primario);
+    bottom: -10px;
+    left: 25%;
+}
+
+.precios-hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Toggle Switch para cambiar entre mensual y anual */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.toggle-label {
+    font-size: 18px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: var(--transicion);
+}
+
+.toggle-label.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-secundario);
+    transition: var(--transicion);
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: var(--transicion);
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--color-primario);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.ahorro-anual {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--color-primario);
+    font-weight: bold;
+    opacity: 0;
+    transition: var(--transicion);
+}
+
+input:checked ~ .ahorro-anual {
+    opacity: 1;
+}
+
+/* Contenedor de planes */
+.planes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjetas de planes */
+.plan-card {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transicion);
+    position: relative;
+    border: 1px solid #333;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    border-color: var(--color-primario);
+}
+
+/* Etiqueta para plan destacado */
+.plan-destacado {
+    border: 2px solid var(--color-primario);
+    transform: scale(1.05);
+}
+
+.plan-destacado:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.plan-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+}
+
+/* Encabezado del plan */
+.plan-header {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.7);
+    border-bottom: 1px solid #333;
+}
+
+.plan-header h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+
+.precio-container {
+    position: relative;
+    background-color: transparent;
+}
+
+.precio {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: var(--transicion);
+}
+
+.precio.anual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.precio.mensual {
+    opacity: 1;
+}
+
+.periodo {
+    font-size: 16px;
+    opacity: 0.7;
+    background-color: transparent;
+}
+
+/* Mostrar precio anual cuando se selecciona */
+body.mostrar-anual .precio.anual {
+    opacity: 1;
+}
+
+body.mostrar-anual .precio.mensual {
+    opacity: 0;
+}
+
+/* Características del plan */
+.plan-features {
+    padding: 20px;
+    background-color: transparent;
+}
+
+.plan-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.plan-features ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 30px;
+    background-color: transparent;
+}
+
+.plan-features ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--color-destacado);
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.plan-features ul li.feature-no {
+    opacity: 0.6;
+}
+
+.plan-features ul li.feature-no::before {
+    content: '\f00d';
+}
+
+/* Botón del plan */
+.plan-button {
+    display: block;
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.plan-button:hover {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-3px);
+}
+
+/* Tooltips explicativos */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 8px;
+    cursor: pointer;
+    color: var(--color-primario);
+}
+
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgba(40, 40, 40, 0.95);
+    color: white;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transicion);
+    z-index: 1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.tooltip:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tabla comparativa */
+.comparativa-container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comparativa-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.comparativa-container h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primario);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tabla-comparativa {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-comparativa table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.tabla-comparativa th {
+    background-color: rgba(20, 20, 20, 0.8);
+    font-size: 18px;
+}
+
+.tabla-comparativa tr:hover {
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+.tabla-comparativa td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla-comparativa i.fa-check {
+    color: var(--color-primario);
+}
+
+.tabla-comparativa i.fa-xmark {
+    opacity: 0.5;
+}
+
+/* Sección FAQ */
+.faq-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primario);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: var(--transicion);
+}
+
+.faq-item:hover {
+    border-color: var(--color-primario);
+    box-shadow: var(--sombra-card);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--color-primario);
+}
+
+.faq-item p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 992px) {
+    .planes-container {
+        gap: 20px;
+    }
+    
+    .plan-destacado {
+        transform: scale(1);
+    }
+    
+    .plan-destacado:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .precios-hero h1 {
+        font-size: 36px;
+    }
+    
+    .plan-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .toggle-container {
+        padding: 0 20px;
+    }
+    
+    .tabla-comparativa th, 
+    .tabla-comparativa td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .precios-hero h1 {
+        font-size: 28px;
+    }
+    
+    .toggle-label {
+        font-size: 16px;
+    }
+    
+    .plan-header h3 {
+        font-size: 20px;
+    }
+    
+    .precio {
+        font-size: 28px;
+    }
+}
