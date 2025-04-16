@@ -1,136 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1 PySW</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RolaGym</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- Menu desplegable para ir a otras paginas y encabezado-->
-    <section class="section_header">
-        <header class="header">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Menu</a>
-                        <ul class="dropdown">
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="pages/clases.html">Clases</a></li>
-                            <li><a href="pages/contacto.html">Inscripcion</a></li>
-                            <li><a href="pages/entrenadores.html">Profesores</a></li>
-                            <li><a href="pages/precios.html">Precios</a></li>
-                            <li><a href="pages/revista.html">Revista</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
-    
-    <!--Video motivacional incrustado-->
-    <section class="hero">
-        <iframe class="hero_iframe" width="1342" height="755" src="https://www.youtube.com/embed/I_RYujJvZ7s" title="Gym Promotional Video | Cinematic Workout Advertisment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container d-flex justify-content-center">
+      <a class="navbar-brand" href="#">RolaGym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!--Seccion de clases destacadas-->
-    <section class="card-conteiner">
-        <div class="card">
-            <img src="img/clases/destacadas/pesas.jpg" alt="">
-            <div class="card-content">
-                <h3>Clases de pesas</h3>
-                <p>
-                    Desarrolla fuerza y resistencia en sesiones diseñadas para potenciar tus músculos. ¡Levanta, progresa y supera tus límites! 
-                </p>
-            </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menú</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+              <li><a class="dropdown-item" href="pages/clases.html">Clases</a></li>
+              <li><a class="dropdown-item" href="pages/contacto.html">Inscripción</a></li>
+              <li><a class="dropdown-item" href="pages/entrenadores.html">Profesores</a></li>
+              <li><a class="dropdown-item" href="pages/precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="pages/revista.html">Revista</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO VIDEO -->
+  <section class="hero text-center">
+    <div class="ratio ratio-16x9">
+      <iframe src="https://www.youtube.com/embed/I_RYujJvZ7s" title="Video" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- CLASES DESTACADAS -->
+  <section class="container py-5">
+    <div class="row text-center">
+      <h2 class="mb-4 text-white">Clases destacadas</h2>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/clases/destacadas/pesas.jpg" class="card-img-top" alt="Pesas"/>
+          <div class="card-body">
+            <h5 class="card-title">Clases de pesas</h5>
+            <p class="card-text">Desarrolla fuerza y resistencia para superar tus límites.</p>
+          </div>
         </div>
-        <div class="card">
-            <img src="img/clases/destacadas/pilates.jpg" alt="">
-            <div class="card-content">
-                <h3>Clases de pilates</h3>
-                <p>
-                    Fortalece tu cuerpo y mente con movimientos controlados que mejoran tu postura, flexibilidad y equilibrio. Ideal para alcanzar armonía y bienestar. 
-                </p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/clases/destacadas/pilates.jpg" class="card-img-top" alt="Pilates"/>
+          <div class="card-body">
+            <h5 class="card-title">Clases de pilates</h5>
+            <p class="card-text">Mejora tu postura, flexibilidad y equilibrio.</p>
+          </div>
         </div>
-        <div class="card">
-            <img src="img/clases/destacadas/zumba.jpg" alt="">
-            <div class="card-content">
-                <h3>Clases de zumba</h3>
-                <p>
-                    Diviértete mientras quemas calorías al ritmo de la música. Bailes dinámicos y energéticos que te harán sudar con una sonrisa. 
-                </p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="img/clases/destacadas/zumba.jpg" class="card-img-top" alt="Zumba"/>
+          <div class="card-body">
+            <h5 class="card-title">Clases de zumba</h5>
+            <p class="card-text">Baila, quema calorías y diviértete al ritmo de la música.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!--Seccion de usuarios satisfechos-->
-    <section class="stat-container">
-        <div class="stat">
-            <div class="contador" data-target="500">0</div>
-            <div class="type">Usuarios satisfechos</div>
+  <!-- CONTADOR -->
+  <section class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <h1 class="contador display-3 fw-bold" data-target="500">0</h1>
+          <p class="fs-5">Usuarios satisfechos</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!--carrusel de imagenes -->
-    <section class="imgs">
-        <div class="imgs-slide">
-            <img src="img/testimonios/1" alt="">
-            <img src="img/testimonios/2.png" alt="">
-            <img src="img/testimonios/3.png" alt="">
-            <img src="img/testimonios/4.png" alt="">
-            <img src="img/testimonios/5.png" alt="">
-
-            <img src="/clases/destacadasimg/testimonios/1" alt="">
-            <img src="img/testimonios/2.png" alt="">
-            <img src="img/testimonios/3.png" alt="">
-            <img src="img/testimonios/4.png" alt="">
-            <img src="img/testimonios/5.png" alt="">
+  <!-- CARRUSEL TESTIMONIOS -->
+  <section class="py-5 bg-black text-white">
+    <div class="container">
+      <h2 class="text-center mb-4">Usuarios satisfechos</h2>
+      <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <!-- Testimonio 1 -->
+          <div class="carousel-item active">
+            <img src="img/testimonios/1.png" class="rounded-circle mb-3" style="width: 100px; height: 100px;" alt="Laura Martínez">
+            <h5>Laura Martínez</h5>
+            <p>"Me encanta disfrutar tanto del entrenamiento. Este gimnasio tiene excelentes instalaciones y un equipo que te impulsa."</p>
+          </div>
+          <!-- Testimonio 2 -->
+          <div class="carousel-item">
+            <img src="img/testimonios/2.png" class="rounded-circle mb-3" style="width: 100px; height: 100px;" alt="Lucas Ramirez">
+            <h5>Lucas Ramirez</h5>
+            <p>"Gracias a este gimnasio no solo he mejorado mi condición física, sino también mi confianza. Es un lugar que inspira a superarse."</p>
+          </div>
+          <!-- Testimonio 3 -->
+          <div class="carousel-item">
+            <img src="img/testimonios/3.png" class="rounded-circle mb-3" style="width: 100px; height: 100px;" alt="Sofía Gomez">
+            <h5>Sofía Gomez</h5>
+            <p>"El ambiente es motivador y siempre encuentro el apoyo que necesito para seguir mejorando."</p>
+          </div>
+          <!-- Testimonio 4 -->
+          <div class="carousel-item">
+            <img src="img/testimonios/4.png" class="rounded-circle mb-3" style="width: 100px; height: 100px;" alt="Juan Perez">
+            <h5>Juan Perez</h5>
+            <p>"Nunca me sentí tan bien entrenando. La energía del lugar es contagiosa y el equipo es excelente."</p>
+          </div>
+          <!-- Testimonio 5 -->
+          <div class="carousel-item">
+            <img src="img/testimonios/5.png" class="rounded-circle mb-3" style="width: 100px; height: 100px;" alt="Valeria Alvarez">
+            <h5>Valeria Alvarez</h5>
+            <p>"Es más que un gimnasio. Es una comunidad que te acompaña en cada paso hacia tus objetivos."</p>
+          </div>
         </div>
-    </section>
+  
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
 
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Newsletter</h3>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Ingresa tu correo" required>
-                </form>
-                <button type="submit" class="btn-submit">Suscribirse</button>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>Newsletter</h5>
+          <form class="newsletter-form">
+            <input type="email" class="form-control mb-2" placeholder="Tu correo" required>
+            <button type="submit" class="btn btn-danger w-100">Suscribirse</button>
+          </form>
         </div>
-
-        <div class="footer-section">
-            <h3>Siguenos</h3>
-            <div class="social-link">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
-            </div>
+        <div class="col-md-4 mb-3">
+          <h5>Redes Sociales</h5>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-
-        <div class="footer-section">
-            <h3>Ubicacion</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
+        <div class="col-md-4 mb-3">
+          <h5>Ubicación</h5>
+          <iframe src="https://www.google.com/maps/embed?pb=..." class="w-100" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
         </div>
+      </div>
+      <hr class="bg-light" />
+      <p class="text-center">&copy; 2025 RolaGym. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 RolaGym. Todos los derechos reservados</p>
-        </div>
-    </footer>
-    
+  <!-- jQuery y Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-    
-    <script src="js/main.js"></script>
-
+  <!-- JS personalizado -->
+  <script src="js/main.js"></script>
 </body>
 </html>

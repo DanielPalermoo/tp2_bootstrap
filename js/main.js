@@ -1,22 +1,16 @@
-const counters = document.querySelectorAll('.contador');
-const speed = 500; 
-
-counters.forEach(counter => {
-    const updateCoutn = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-
-        const inc = target / speed;
-
-        if (count < target) {
-            counter.innerText = count + inc;
-            setTimeout(updateCoutn, 1); 
-        }else{
-            count.innerText=target;
-
-        } 
-    }
-
-    updateCoutn();
-
+$(document).ready(function () {
+    $('.contador').each(function () {
+        let $this = $(this);
+        let target = +$this.attr('data-target');
+        let count = 0;
+        let step = Math.ceil(target / 100);
+        let interval = setInterval(() => {
+            count += step;
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            $this.text(count);
+        }, 20);
+    });
 });
