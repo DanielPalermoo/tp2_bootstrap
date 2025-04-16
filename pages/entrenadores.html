@@ -1,290 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrenadores</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/entrenadores.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrenadores - RolaGym</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/entrenadores.css" />
 </head>
-<body>
-   <!--Header con menu desplegable-->
+<body class="bg-black text-white">
 
-    <section class="section_header">
-        <header class="header">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Menu</a>
-                        <ul class="dropdown">
-                            <li><a href="../index.html">Inicio</a></li>
-                            <li><a href="clases.html">Clases</a></li>
-                            <li><a href="contacto.html">Inscripcion</a></li>
-                            <li><a href="entrenadores.html">Profesores</a></li>
-                            <li><a href="precios.html">Precios</a></li>
-                            <li><a href="revista.html">Revista</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
-
-    <!--Titulo de la seccion-->
-
-    <section class="page-title">
-        <h1>Nuestro equipo de entrenadores</h1>
-        <p>Conoce a los profesionales que te guiaran en tu camino fitness</p>
-    </section>
-    <section class="trainers-container">
-        <!-- Entrenador 1 -->
-        <div class="trainer-card">
-            <div class="card-inner">
-                <!-- Frente de la tarjeta -->
-                <div class="card-front">
-                    <img src="../img/entrenadores/trainer1.jpg" alt="Entrenador Carlos">
-                    <div class="trainer-info">
-                        <h3>Carlos Rodríguez</h3>
-                        <p>Especialista en CrossFit</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-1" name="rating-1" value="5" checked><label for="star5-1"></label>
-                            <input type="radio" id="star4-1" name="rating-1" value="4"><label for="star4-1"></label>
-                            <input type="radio" id="star3-1" name="rating-1" value="3"><label for="star3-1"></label>
-                            <input type="radio" id="star2-1" name="rating-1" value="2"><label for="star2-1"></label>
-                            <input type="radio" id="star1-1" name="rating-1" value="1"><label for="star1-1"></label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reverso de la tarjeta -->
-                <div class="card-back">
-                    <h3>Carlos Rodríguez</h3>
-                    <p>Con más de 8 años de experiencia en CrossFit, Carlos ha competido a nivel nacional y está certificado como Level 3 Trainer.</p>
-                    
-                    <div class="skills">
-                        <div class="skill">
-                            <span>Fuerza</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%;">95%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Flexibilidad</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%;">75%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Resistencia</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%;">90%</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Entrenador 2 -->
-        <div class="trainer-card">
-            <div class="card-inner">
-                <!-- Frente de la tarjeta -->
-                <div class="card-front">
-                    <img src="../img/entrenadores/trainer2.jpg" alt="Entrenadora María">
-                    <div class="trainer-info">
-                        <h3>María Fernández</h3>
-                        <p>Especialista en Yoga y Pilates</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-2" name="rating-2" value="5" checked><label for="star5-2"></label>
-                            <input type="radio" id="star4-2" name="rating-2" value="4"><label for="star4-2"></label>
-                            <input type="radio" id="star3-2" name="rating-2" value="3"><label for="star3-2"></label>
-                            <input type="radio" id="star2-2" name="rating-2" value="2"><label for="star2-2"></label>
-                            <input type="radio" id="star1-2" name="rating-2" value="1"><label for="star1-2"></label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reverso de la tarjeta -->
-                <div class="card-back">
-                    <h3>María Fernández</h3>
-                    <p>Certificada en Hatha Yoga y Pilates, María se especializa en mejorar la postura y flexibilidad de sus alumnos.</p>
-                    
-                    <div class="skills">
-                        <div class="skill">
-                            <span>Flexibilidad</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 98%;">98%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Equilibrio</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%;">90%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Técnica</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%;">85%</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Entrenador 3 -->
-        <div class="trainer-card">
-            <div class="card-inner">
-                <!-- Frente de la tarjeta -->
-                <div class="card-front">
-                    <img src="../img/entrenadores/trainer3.jpg" alt="Entrenador Roberto">
-                    <div class="trainer-info">
-                        <h3>Roberto Sánchez</h3>
-                        <p>Especialista en Musculación</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-3" name="rating-3" value="5"><label for="star5-3"></label>
-                            <input type="radio" id="star4-3" name="rating-3" value="4" checked><label for="star4-3"></label>
-                            <input type="radio" id="star3-3" name="rating-3" value="3"><label for="star3-3"></label>
-                            <input type="radio" id="star2-3" name="rating-3" value="2"><label for="star2-3"></label>
-                            <input type="radio" id="star1-3" name="rating-3" value="1"><label for="star1-3"></label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reverso de la tarjeta -->
-                <div class="card-back">
-                    <h3>Roberto Sánchez</h3>
-                    <p>Con formación en fisioterapia, Roberto se especializa en hipertrofia muscular y rehabilitación de lesiones deportivas.</p>
-                    
-                    <div class="skills">
-                        <div class="skill">
-                            <span>Fuerza</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 92%;">92%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Técnica</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 88%;">88%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Conocimiento Anatómico</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%;">95%</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Entrenador 4 -->
-        <div class="trainer-card">
-            <div class="card-inner">
-                <!-- Frente de la tarjeta -->
-                <div class="card-front">
-                    <img src="../img/entrenadores/trainer4.jpg" alt="Entrenadora Lucía">
-                    <div class="trainer-info">
-                        <h3>Lucía Gómez</h3>
-                        <p>Especialista en Zumba y Cardio</p>
-                        <div class="rating">
-                            <input type="radio" id="star5-4" name="rating-4" value="5" checked><label for="star5-4"></label>
-                            <input type="radio" id="star4-4" name="rating-4" value="4"><label for="star4-4"></label>
-                            <input type="radio" id="star3-4" name="rating-4" value="3"><label for="star3-4"></label>
-                            <input type="radio" id="star2-4" name="rating-4" value="2"><label for="star2-4"></label>
-                            <input type="radio" id="star1-4" name="rating-4" value="1"><label for="star1-4"></label>
-                        </div>
-                    </div>
-                </div>
-                <!-- Reverso de la tarjeta -->
-                <div class="card-back">
-                    <h3>Lucía Gómez</h3>
-                    <p>Bailarina profesional con certificación en Zumba Fitness. Especializada en coreografías dinámicas y entrenamiento aeróbico.</p>
-                    
-                    <div class="skills">
-                        <div class="skill">
-                            <span>Resistencia</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 96%;">96%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Ritmo</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 99%;">99%</div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Energía</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 94%;">94%</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Newsletter</h3>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Ingresa tu correo" required>
-                </form>
-                <button type="submit" class="btn-submit">Suscribirse</button>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Siguenos</h3>
-            <div class="social-link">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>Ubicacion</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </footer>
-
-    <div class="footer-bottom">
-        <p>&copy; 2025 RolaGym. Todos los derechos reservados</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">RolaGym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menú</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+              <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+              <li><a class="dropdown-item" href="contacto.html">Inscripción</a></li>
+              <li><a class="dropdown-item" href="entrenadores.html">Profesores</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="revista.html">Revista</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </nav>
+
+  <!-- Título -->
+  <section class="page-title text-center py-5">
+    <div class="container">
+      <h1 class="text-white position-relative d-inline-block">Nuestro equipo de entrenadores</h1>
+      <p class="text-secondary">Conocé a los profesionales que te guiarán en tu camino fitness</p>
+    </div>
+  </section>
+
+  <!-- Tarjetas de entrenadores -->
+  <section class="container py-5">
+    <div class="row justify-content-center g-4">
+      <!-- Aquí se insertan las trainer-card como están en tu CSS personalizado -->
+      <div class="d-flex flex-wrap justify-content-center gap-4">
+        <!-- Tarjeta 1 -->
+        <div class="trainer-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../img/entrenadores/trainer1.jpg" alt="Entrenador Carlos">
+              <div class="trainer-info">
+                <h3>Carlos Rodríguez</h3>
+                <p>Especialista en CrossFit</p>
+                <div class="rating">
+                  <input type="radio" id="star5-1" name="rating-1" value="5" checked><label for="star5-1"></label>
+                  <input type="radio" id="star4-1" name="rating-1" value="4"><label for="star4-1"></label>
+                  <input type="radio" id="star3-1" name="rating-1" value="3"><label for="star3-1"></label>
+                  <input type="radio" id="star2-1" name="rating-1" value="2"><label for="star2-1"></label>
+                  <input type="radio" id="star1-1" name="rating-1" value="1"><label for="star1-1"></label>
+                </div>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Carlos Rodríguez</h3>
+              <p>Con más de 8 años de experiencia en CrossFit, Carlos ha competido a nivel nacional y está certificado como Level 3 Trainer.</p>
+              <div class="skills">
+                <div class="skill"><span>Fuerza</span><div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div></div>
+                <div class="skill"><span>Flexibilidad</span><div class="skill-bar"><div class="skill-level" style="width: 75%;">75%</div></div></div>
+                <div class="skill"><span>Resistencia</span><div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div></div>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="trainer-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../img/entrenadores/trainer2.jpg" alt="Entrenadora María">
+              <div class="trainer-info">
+                <h3>María Fernández</h3>
+                <p>Especialista en Yoga y Pilates</p>
+                <div class="rating">
+                  <input type="radio" id="star5-2" name="rating-2" value="5" checked><label for="star5-2"></label>
+                  <input type="radio" id="star4-2" name="rating-2" value="4"><label for="star4-2"></label>
+                  <input type="radio" id="star3-2" name="rating-2" value="3"><label for="star3-2"></label>
+                  <input type="radio" id="star2-2" name="rating-2" value="2"><label for="star2-2"></label>
+                  <input type="radio" id="star1-2" name="rating-2" value="1"><label for="star1-2"></label>
+                </div>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>María Fernández</h3>
+              <p>Certificada en Hatha Yoga y Pilates, María se especializa en mejorar la postura y flexibilidad de sus alumnos.</p>
+              <div class="skills">
+                <div class="skill"><span>Flexibilidad</span><div class="skill-bar"><div class="skill-level" style="width: 98%;">98%</div></div></div>
+                <div class="skill"><span>Equilibrio</span><div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div></div>
+                <div class="skill"><span>Técnica</span><div class="skill-bar"><div class="skill-level" style="width: 85%;">85%</div></div></div>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="trainer-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../img/entrenadores/trainer3.jpg" alt="Entrenador Roberto">
+              <div class="trainer-info">
+                <h3>Roberto Sánchez</h3>
+                <p>Especialista en Musculación</p>
+                <div class="rating">
+                  <input type="radio" id="star5-3" name="rating-3" value="5"><label for="star5-3"></label>
+                  <input type="radio" id="star4-3" name="rating-3" value="4" checked><label for="star4-3"></label>
+                  <input type="radio" id="star3-3" name="rating-3" value="3"><label for="star3-3"></label>
+                  <input type="radio" id="star2-3" name="rating-3" value="2"><label for="star2-3"></label>
+                  <input type="radio" id="star1-3" name="rating-3" value="1"><label for="star1-3"></label>
+                </div>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Roberto Sánchez</h3>
+              <p>Con formación en fisioterapia, Roberto se especializa en hipertrofia muscular y rehabilitación de lesiones deportivas.</p>
+              <div class="skills">
+                <div class="skill"><span>Fuerza</span><div class="skill-bar"><div class="skill-level" style="width: 92%;">92%</div></div></div>
+                <div class="skill"><span>Técnica</span><div class="skill-bar"><div class="skill-level" style="width: 88%;">88%</div></div></div>
+                <div class="skill"><span>Conocimiento Anatómico</span><div class="skill-bar"><div class="skill-level" style="width: 95%;">95%</div></div></div>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="trainer-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../img/entrenadores/trainer4.jpg" alt="Entrenadora Lucía">
+              <div class="trainer-info">
+                <h3>Lucía Gómez</h3>
+                <p>Especialista en Zumba y Cardio</p>
+                <div class="rating">
+                  <input type="radio" id="star5-4" name="rating-4" value="5" checked><label for="star5-4"></label>
+                  <input type="radio" id="star4-4" name="rating-4" value="4"><label for="star4-4"></label>
+                  <input type="radio" id="star3-4" name="rating-4" value="3"><label for="star3-4"></label>
+                  <input type="radio" id="star2-4" name="rating-4" value="2"><label for="star2-4"></label>
+                  <input type="radio" id="star1-4" name="rating-4" value="1"><label for="star1-4"></label>
+                </div>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>Lucía Gómez</h3>
+              <p>Bailarina profesional con certificación en Zumba Fitness. Especializada en coreografías dinámicas y entrenamiento aeróbico.</p>
+              <div class="skills">
+                <div class="skill"><span>Resistencia</span><div class="skill-bar"><div class="skill-level" style="width: 96%;">96%</div></div></div>
+                <div class="skill"><span>Ritmo</span><div class="skill-bar"><div class="skill-level" style="width: 99%;">99%</div></div></div>
+                <div class="skill"><span>Energía</span><div class="skill-bar"><div class="skill-level" style="width: 94%;">94%</div></div></div>
+              </div>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>Newsletter</h5>
+          <form class="newsletter-form">
+            <input type="email" class="form-control mb-2" placeholder="Ingresa tu correo" required>
+            <button type="submit" class="btn btn-danger w-100">Suscribirse</button>
+          </form>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Síguenos</h5>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Ubicación</h5>
+          <iframe src="https://www.google.com/maps/embed?..." class="w-100" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <hr class="bg-light" />
+      <p class="text-center">&copy; 2025 RolaGym. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
