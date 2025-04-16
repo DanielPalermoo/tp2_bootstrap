@@ -1,262 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precios</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/precios.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precios - RolaGym</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/precios.css" />
 </head>
-<body>
-     <!-- Menu desplegable para ir a otras paginas y encabezado-->
-     <section class="section_header">
-        <header class="header">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Menu</a>
-                        <ul class="dropdown">
-                            <li><a href="../index.html">Inicio</a></li>
-                            <li><a href="clases.html">Clases</a></li>
-                            <li><a href="contacto.html">Inscripcion</a></li>
-                            <li><a href="entrenadores.html">Profesores</a></li>
-                            <li><a href="precios.html">Precios</a></li>
-                            <li><a href="revista.html">Revista</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
+<body class="bg-black text-white">
 
-    <section class="precios-hero">
-        <h1>Planes y Membresías</h1>
-        <p>Descubre nuestros planes personalizados para alcanzar tus objetivos</p>
-    </section>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">RolaGym</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menú</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+              <li><a class="dropdown-item" href="clases.html">Clases</a></li>
+              <li><a class="dropdown-item" href="contacto.html">Inscripción</a></li>
+              <li><a class="dropdown-item" href="entrenadores.html">Profesores</a></li>
+              <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+              <li><a class="dropdown-item" href="revista.html">Revista</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Toggle switch mensual/anual -->
-    <section class="toggle-container">
-        <span class="toggle-label active">Mensual</span>
-        <label class="toggle-switch">
-            <input type="checkbox" id="precio-toggle">
-            <span class="slider round"></span>
-        </label>
-        <span class="toggle-label">Anual</span>
-        <p class="ahorro-anual">¡Ahorra hasta un 20% con planes anuales!</p>
-    </section>
+  <!-- Título -->
+  <section class="precios-hero text-center py-5 border-bottom border-danger">
+    <div class="container">
+      <h1 class="text-white position-relative d-inline-block">Planes y Membresías</h1>
+      <p class="text-secondary">Descubre nuestros planes personalizados para alcanzar tus objetivos</p>
+    </div>
+  </section>
 
-    <!-- Tabla de precios -->
-    <section class="planes-container">
-        <!-- Plan Básico -->
-        <div class="plan-card">
-            <div class="plan-header">
-                <h3>Básico</h3>
-                <div class="precio-container">
-                    <span class="precio mensual">$8.000</span>
-                    <span class="precio anual">$76.800</span>
-                    <span class="periodo">/mes</span>
-                </div>
-            </div>
-            <div class="plan-features">
-                <ul>
-                    <li>
-                        Acceso a sala de musculación
-                        <span class="tooltip" data-tooltip="Acceso en horario reducido (8:00 - 20:00)">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li>2 clases grupales por semana</li>
-                    <li>
-                        Evaluación física inicial
-                        <span class="tooltip" data-tooltip="Una evaluación física al comenzar el plan">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li class="feature-no">Sin acceso a piscina</li>
-                    <li class="feature-no">Sin entrenador personal</li>
-                </ul>
-            </div>
-            <a href="contacto.html" class="plan-button">Elegir Plan</a>
+  <!-- Toggle mensual/anual -->
+  <section class="toggle-container d-flex flex-column align-items-center my-4">
+    <div class="d-flex align-items-center gap-2">
+      <span class="toggle-label active">Mensual</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="precio-toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Anual</span>
+    </div>
+    <p class="ahorro-anual">¡Ahorra hasta un 20% con planes anuales!</p>
+  </section>
+
+  <!-- Planes -->
+  <section class="planes-container d-flex flex-wrap justify-content-center gap-4">
+    <!-- Plan Básico -->
+    <div class="plan-card">
+      <div class="plan-header">
+        <h3>Básico</h3>
+        <div class="precio-container">
+          <span class="precio mensual">$8.000</span>
+          <span class="precio anual">$76.800</span>
+          <span class="periodo">/mes</span>
         </div>
-        
-        <!-- Plan Premium -->
-        <div class="plan-card plan-destacado">
-            <div class="plan-tag">Popular</div>
-            <div class="plan-header">
-                <h3>Premium</h3>
-                <div class="precio-container">
-                    <span class="precio mensual">$12.000</span>
-                    <span class="precio anual">$115.200</span>
-                    <span class="periodo">/mes</span>
-                </div>
-            </div>
-            <div class="plan-features">
-                <ul>
-                    <li>
-                        Acceso ilimitado a sala de musculación
-                        <span class="tooltip" data-tooltip="Acceso 24/7 todos los días de la semana">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li>
-                        Clases grupales ilimitadas
-                        <span class="tooltip" data-tooltip="Acceso a todas las clases según disponibilidad">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li>Evaluaciones físicas trimestrales</li>
-                    <li>Acceso a piscina</li>
-                    <li class="feature-no">Sin entrenador personal</li>
-                </ul>
-            </div>
-            <a href="contacto.html" class="plan-button">Elegir Plan</a>
-        </div>
-        
-        <!-- Plan Elite -->
-        <div class="plan-card">
-            <div class="plan-header">
-                <h3>Elite</h3>
-                <div class="precio-container">
-                    <span class="precio mensual">$18.000</span>
-                    <span class="precio anual">$172.800</span>
-                    <span class="periodo">/mes</span>
-                </div>
-            </div>
-            <div class="plan-features">
-                <ul>
-                    <li>
-                        Acceso total 24/7
-                        <span class="tooltip" data-tooltip="Acceso a todas las instalaciones en cualquier momento">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li>Clases grupales ilimitadas</li>
-                    <li>
-                        4 sesiones mensuales con entrenador personal
-                        <span class="tooltip" data-tooltip="Sesiones personalizadas de 1 hora con un entrenador profesional">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </span>
-                    </li>
-                    <li>Acceso a piscina y spa</li>
-                    <li>Plan nutricional personalizado</li>
-                </ul>
-            </div>
-            <a href="contacto.html" class="plan-button">Elegir Plan</a>
-        </div>
-    </section>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>Acceso a sala de musculación <span class="tooltip" data-tooltip="Acceso en horario reducido (8:00 - 20:00)"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li>2 clases grupales por semana</li>
+          <li>Evaluación física inicial <span class="tooltip" data-tooltip="Una evaluación física al comenzar el plan"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li class="feature-no">Sin acceso a piscina</li>
+          <li class="feature-no">Sin entrenador personal</li>
+        </ul>
+      </div>
+      <a href="contacto.html" class="plan-button">Elegir Plan</a>
+    </div>
 
-    <!-- Sección adicional para comparativa -->
-    <section class="comparativa-container">
-        <h2>Comparativa de Planes</h2>
-        <div class="tabla-comparativa">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Características</th>
-                        <th>Básico</th>
-                        <th>Premium</th>
-                        <th>Elite</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Acceso a sala de musculación</td>
-                        <td>Horario limitado</td>
-                        <td>24/7</td>
-                        <td>24/7</td>
-                    </tr>
-                    <tr>
-                        <td>Clases grupales</td>
-                        <td>2 por semana</td>
-                        <td>Ilimitadas</td>
-                        <td>Ilimitadas</td>
-                    </tr>
-                    <tr>
-                        <td>Evaluación física</td>
-                        <td>Inicial</td>
-                        <td>Trimestral</td>
-                        <td>Mensual</td>
-                    </tr>
-                    <tr>
-                        <td>Entrenador personal</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                        <td>4 sesiones/mes</td>
-                    </tr>
-                    <tr>
-                        <td>Acceso a piscina</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Plan nutricional</td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                        <td><i class="fa-solid fa-xmark"></i></td>
-                        <td><i class="fa-solid fa-check"></i></td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Plan Premium -->
+    <div class="plan-card plan-destacado">
+      <div class="plan-tag">Popular</div>
+      <div class="plan-header">
+        <h3>Premium</h3>
+        <div class="precio-container">
+          <span class="precio mensual">$12.000</span>
+          <span class="precio anual">$115.200</span>
+          <span class="periodo">/mes</span>
         </div>
-    </section>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>Acceso ilimitado a sala de musculación <span class="tooltip" data-tooltip="Acceso 24/7 todos los días de la semana"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li>Clases grupales ilimitadas <span class="tooltip" data-tooltip="Acceso a todas las clases según disponibilidad"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li>Evaluaciones físicas trimestrales</li>
+          <li>Acceso a piscina</li>
+          <li class="feature-no">Sin entrenador personal</li>
+        </ul>
+      </div>
+      <a href="contacto.html" class="plan-button">Elegir Plan</a>
+    </div>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <h3>¿Puedo cambiar de plan en cualquier momento?</h3>
-                <p>Sí, puedes actualizar tu plan en cualquier momento. Si decides pasar a un plan superior, se aplicará un prorrateo del valor restante.</p>
-            </div>
-            <div class="faq-item">
-                <h3>¿Hay algún cargo por inscripción?</h3>
-                <p>No cobramos cargo por inscripción en ninguno de nuestros planes.</p>
-            </div>
-            <div class="faq-item">
-                <h3>¿Cómo funciona el plan anual?</h3>
-                <p>Con el plan anual pagas por 12 meses y obtienes un 20% de descuento sobre el precio mensual. El pago se realiza una sola vez al inicio del período.</p>
-            </div>
+    <!-- Plan Elite -->
+    <div class="plan-card">
+      <div class="plan-header">
+        <h3>Elite</h3>
+        <div class="precio-container">
+          <span class="precio mensual">$18.000</span>
+          <span class="precio anual">$172.800</span>
+          <span class="periodo">/mes</span>
         </div>
-    </section>
+      </div>
+      <div class="plan-features">
+        <ul>
+          <li>Acceso total 24/7 <span class="tooltip" data-tooltip="Acceso a todas las instalaciones en cualquier momento"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li>Clases grupales ilimitadas</li>
+          <li>4 sesiones mensuales con entrenador personal <span class="tooltip" data-tooltip="Sesiones personalizadas de 1 hora con un entrenador profesional"><i class="fa-solid fa-circle-info"></i></span></li>
+          <li>Acceso a piscina y spa</li>
+          <li>Plan nutricional personalizado</li>
+        </ul>
+      </div>
+      <a href="contacto.html" class="plan-button">Elegir Plan</a>
+    </div>
+  </section>
 
-     <!-- Footer -->
-     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Newsletter</h3>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Ingresa tu correo" required>
-                </form>
-                <button type="submit" class="btn-submit">Suscribirse</button>
-            </div>
+  <!-- Comparativa de Planes -->
+  <section class="comparativa-container py-5">
+    <div class="container">
+      <h2 class="text-center text-white mb-4 position-relative">Comparativa de Planes</h2>
+      <div class="tabla-comparativa table-responsive">
+        <table class="table table-dark table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Características</th>
+              <th>Básico</th>
+              <th>Premium</th>
+              <th>Elite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Acceso a sala de musculación</td><td>Horario limitado</td><td>24/7</td><td>24/7</td></tr>
+            <tr><td>Clases grupales</td><td>2 por semana</td><td>Ilimitadas</td><td>Ilimitadas</td></tr>
+            <tr><td>Evaluación física</td><td>Inicial</td><td>Trimestral</td><td>Mensual</td></tr>
+            <tr><td>Entrenador personal</td><td><i class="fa-solid fa-xmark"></i></td><td><i class="fa-solid fa-xmark"></i></td><td>4 sesiones/mes</td></tr>
+            <tr><td>Acceso a piscina</td><td><i class="fa-solid fa-xmark"></i></td><td><i class="fa-solid fa-check"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+            <tr><td>Plan nutricional</td><td><i class="fa-solid fa-xmark"></i></td><td><i class="fa-solid fa-xmark"></i></td><td><i class="fa-solid fa-check"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section py-5">
+    <div class="container">
+      <h2 class="text-center text-white mb-5 position-relative">Preguntas Frecuentes</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="faq-item h-100 p-4 bg-dark border rounded">
+            <h3 class="h5 mb-3">¿Puedo cambiar de plan en cualquier momento?</h3>
+            <p>Sí, puedes actualizar tu plan en cualquier momento. Si decides pasar a un plan superior, se aplicará un prorrateo del valor restante.</p>
+          </div>
         </div>
-
-        <div class="footer-section">
-            <h3>Siguenos</h3>
-            <div class="social-link">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
-            </div>
+        <div class="col">
+          <div class="faq-item h-100 p-4 bg-dark border rounded">
+            <h3 class="h5 mb-3">¿Hay algún cargo por inscripción?</h3>
+            <p>No cobramos cargo por inscripción en ninguno de nuestros planes.</p>
+          </div>
         </div>
-
-        <div class="footer-section">
-            <h3>Ubicacion</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.7762426536223!2d-65.3036306!3d-24.1857711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4e8bd7a62f%3A0xf2749d697382e408!2sUniversidad%20Nacional%20de%20Jujuy!5e0!3m2!1ses!2sar!4v1712328756814!5m2!1ses!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        <div class="col">
+          <div class="faq-item h-100 p-4 bg-dark border rounded">
+            <h3 class="h5 mb-3">¿Cómo funciona el plan anual?</h3>
+            <p>Con el plan anual pagas por 12 meses y obtienes un 20% de descuento sobre el precio mensual. El pago se realiza una sola vez al inicio del período.</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 RolaGym. Todos los derechos reservados</p>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>Newsletter</h5>
+          <form class="newsletter-form">
+            <input type="email" class="form-control mb-2" placeholder="Ingresa tu correo" required>
+            <button type="submit" class="btn btn-danger w-100">Suscribirse</button>
+          </form>
         </div>
-    </footer>
+        <div class="col-md-4 mb-3">
+          <h5>Síguenos</h5>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Ubicación</h5>
+          <iframe src="https://www.google.com/maps/embed?..." class="w-100" height="200" style="border:0;" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <hr class="bg-light" />
+      <p class="text-center">&copy; 2025 RolaGym. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-    <script src="../js/precios.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="../js/precios.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
